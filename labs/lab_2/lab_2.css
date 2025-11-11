@@ -1,0 +1,14 @@
+/* Optional accent color styling for Lab 2 */
+.lab-tab.active {
+    background-color: #b3e5fc;
+    border-color: #0288d1;
+}
+
+.menu-item.highlight {
+    background-color: #e1f5fe;
+    border-color: #0288d1;
+}
+
+.main-content {
+    border-color: #0288d1;
+}
