@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7</title>
+    <link rel="stylesheet" href="lab_7.css">
+    <script src="lab_7.js" defer></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="orientation-box">
+        <div class="user-img">
+            <img src="../../profile.jpg" alt="Фото студента">
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+        <h2>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</h2>
+        <div class="student-info">
+            Виконавець: Студент групи ІМ-33 — Набока Тимур Максимович
+        </div>
+    </div>
+
+    <div class="lab-tabs">
+        <a href="../../index.html" class="lab-tab">Лабораторна<br>робота №1</a>
+        <a href="../lab_2/lab_2.html" class="lab-tab">Лабораторна<br>робота №2</a>
+        <a href="../lab_3/lab_3.html" class="lab-tab">Лабораторна<br>робота №3</a>
+        <a href="../lab_4/lab_4.html" class="lab-tab">Лабораторна<br>робота №4</a>
+        <a href="../lab_5/lab_5.html" class="lab-tab">Лабораторна<br>робота №5</a>
+        <a href="../lab_6/lab_6.html" class="lab-tab">Лабораторна<br>робота №6</a>
+        <a href="./lab_7.html" class="lab-tab active">Лабораторна<br>робота №7</a>
+        <a class="lab-tab">Лабораторна<br>робота №8</a>
+        <a class="lab-tab">Лабораторна<br>робота №9</a>
+    </div>
+
+    <div class="content-wrapper">
+
+        <div class="sidebar">
+            <div class="menu-item active">Тема, мета ЛР №7...</div>
+            <div class="menu-item">Посилання на репозиторії</div>
+            <div class="menu-item">Посилання на живі сторінки</div>
+            <div class="menu-item">Завдання №1</div>
+            <div class="menu-item">Завдання №2</div>
+            <div class="menu-item">Завдання №3</div>
+            <div class="menu-item">Завдання №4</div>
+            <div class="menu-item">Завдання №5</div>
+            <div class="menu-item">Висновки до ЛР №7</div>
+        </div>
+
+        <div class="main-content">
+
+            <div class="content-section active">
+                <h2 class="section-title">Тема лабораторної роботи №7</h2>
+
+                <div class="info-block">
+                    <h4>Тема:</h4>
+                    <p>МОДУЛЬНІСТЬ КОДУ. NODE.JS. JSON. WEB STORAGE API. АСИНХРОННІСТЬ. ПРОМІСИ. HTTP-ЗАПИТИ. REST API. AJAX. ПАГІНАЦІЯ. CRUD.</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>Мета:</h4>
+                    <p>Придбати практичні навички роботи зі створенням модального вікна, делегуванням подій, обробкою HTTP-запитів, роботою з Web Storage API.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Посилання на репозиторії</h2>
+                <ul>
+                    <li>Репозиторій WEB-застосунку: <a href="https://github.com/Homa4/lab7-WEB.git" target="_blank">https://github.com/Homa4/lab7-WEB.git</a></li>
+                    <li>Репозиторій звіту: <a href="https://github.com/Homa4/IM-33_-appRECORD-NabokaTimur-FIOT-2025" target="_blank">https://github.com/Homa4/IM-33_-appRECORD-NabokaTimur-FIOT-2025</a></li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Посилання на живі сторінки</h2>
+                <ul>
+                    <li>Жива сторінка WEB-застосунку:
+                        
+                        <a href="https://homa4.github.io/lab7-WEB/" target="_blank">https://homa4.github.io/lab7-WEB/</a>
+                    </li>
+                    <li>Жива сторінка звіту:
+                        <a href="https://homa4.github.io/IM-33_-appRECORD-NabokaTimur-FIOT-2025/" target="_blank">https://homa4.github.io/IM-33_-appRECORD-NabokaTimur-FIOT-2025/</a></li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Завдання №1 — Галерея зображень + Модальне вікно</h2>
+
+                <div class="info-block">
+                    <h4>Код завдання:</h4>
+<pre><code>
+const images = [...]; // як у твоєму JS
+galleryList.addEventListener("click", onGalleryItemClick);
+function onGalleryItemClick(event) { ... }
+</code></pre>
+                </div>
+
+                <div class="info-block">
+                    <h4>Результат виконання:</h4>
+                    <p class="placeholder">
+                        <img src="img/task1.png" alt="Завдання 1">
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Завдання №2 — Web Storage API</h2>
+
+                <div class="info-block">
+<pre><code>
+feedbackForm.addEventListener("input", ... );
+localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+...
+</code></pre>
+                </div>
+                <div class="info-block placeholder">
+                    <img src="img/task2.png" alt="">
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Завдання №3 — Таймер + flatpickr</h2>
+<pre><code>
+flatpickr(dateTimePicker, options);
+startButton.addEventListener("click", () => { ... });
+</code></pre>
+                <div class="placeholder">
+                    <img src="img/task3.png" alt="">
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Завдання №4 — Проміси + повідомлення</h2>
+<pre><code>
+createPromise(delay, state)
+  .then(...)
+  .catch(...);
+</code></pre>
+                <div class="placeholder">
+                    <img src="img/task4.png" alt="">
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Завдання №5 — HTTP-запити, REST API (Pixabay)</h2>
+<pre><code>
+fetchImages(searchQuery).then(...).catch(...);
+renderGallery(images);
+</code></pre>
+                <div class="placeholder">
+                    <img src="img/task5.png" alt="">
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Висновки до лабораторної роботи №7</h2>
+                <p>
+                    У ході виконання лабораторної роботи №7 було відпрацьовано роботу з Web Storage API,
+                    модальними вікнами, делегуванням подій, асинхронними HTTP-запитами та REST API.
+                    Набуто практичні навички побудови інтерактивних застосунків із взаємодією з сервером.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="../../script.js"></script>
+</body>
+</html>

@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       const key = item.innerText.trim();
       let value = null;
 
-      // === 🔹 Custom mapping for Lab 2 ===
       if (key.includes("Тема")) {
         const title = data.title || "";
         const goal = data.goal || "";

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторна робота №5 — Frontend розробка</title>
+  <link rel="stylesheet" href="lab_5.css">  
+  <link rel="stylesheet" href="../../style.css">
+  <script src="./lab_5.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="orientation-box">
+      <div class="user-img">
+        <img src="../../profile.jpg" alt="Фото студента" />
+      </div>
+    </div>
+
+    <div class="header">
+      <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+      <h2>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</h2>
+      <div class="student-info">
+        Виконавець: Студент групи ІМ-33_____ Набока Тимур Максимович
+      </div>
+    </div>
+
+    <div class="lab-tabs">
+      <a class="lab-tab" href="../../index.html">Лабораторна<br />робота №1</a>
+      <a class="lab-tab" href="../lab_2/lab_2.html">Лабораторна<br />робота №2</a>
+      <a class="lab-tab" href="../lab_3/lab_3.html">Лабораторна<br />робота №3</a>
+      <a class="lab-tab" href="../lab_4/lab_4.html">Лабораторна<br />робота №4</a>
+      <a class="lab-tab active" href="./lab_5.html">Лабораторна<br />робота №5</a>
+      <a class="lab-tab" href="../lab_6/lab_6.html">Лабораторна<br />робота №6</a>
+      <a class="lab-tab" href="../lab_7/lab_7.html">Лабораторна<br />робота №7</a>
+      <a class="lab-tab" href="#">Лабораторна<br />робота №8</a>
+      <a class="lab-tab" href="#">Лабораторна<br />робота №9</a>
+    </div>
+
+    <div class="content-wrapper">
+
+      <div class="sidebar">
+        <div class="menu-item active">Тема, мета ЛР №5, місце розташування сайту та звіту</div>
+        <div class="menu-item">Посилання на репозиторії</div>
+        <div class="menu-item">Посилання на живі сторінки</div>
+        <div class="menu-item">Завдання №1</div>
+        <div class="menu-item">Завдання №2</div>
+        <div class="menu-item">Завдання №3</div>
+        <div class="menu-item">Завдання №4</div>
+        <div class="menu-item">Завдання №5</div>
+        <div class="menu-item">Завдання №6</div>
+        <div class="menu-item">Висновки до ЛР №5</div>
+      </div>
+
+      <div class="main-content">
+
+        <div class="content-section active">
+          <h2 class="section-title">Тема лабораторної роботи №5</h2>
+          <div class="info-block">
+            <h4>Тема:</h4>
+            <p>
+              Масиви, функції колбеків, класи. Обробка даних та структур у JavaScript.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Мета лабораторної роботи:</h4>
+            <p>
+              Закріпити вміння роботи з масивами, об'єктами, методами масивів, 
+              callback-функціями та класами.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Місце розташування звітних матеріалів:</h4>
+            <p>
+              HTML-звітного документу (цей документ), власного WEB-застосунку
+              та репозиторію із вихідними файлами. Посилання наведені в
+              наступних пунктах меню.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Посилання на репозиторії</h2>
+          <ul>
+            <li>
+              Репозиторій власного WEB-застосунку:
+              <a href="https://github.com/Homa4/lab5-WEB.git" target="blank">
+               https://github.com/Homa4/lab5-WEB.git
+              </a>
+            </li>
+            <li>
+              Репозиторій звітного HTML-документу:
+              <a href="https://github.com/Homa4/IM-33_-appRECORD-NabokaTimur-FIOT-2025" target="_blank">
+                https://github.com/Homa4/IM-33_-appRECORD-NabokaTimur-FIOT-2025
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Посилання на живі сторінки</h2>
+          <ul>
+            <li>
+              Жива сторінка власного WEB-застосунку:
+              <a href="https://homa4.github.io/lab5-WEB/" target="_blank">
+                https://homa4.github.io/lab5-WEB/
+              </a>
+            </li>
+            <li>
+              Жива сторінка звітного HTML-документу:
+              <a href="https://homa4.github.io/IM-33_-appRECORD-NabokaTimur-FIOT-2025/" target="_blank">
+                https://homa4.github.io/IM-33_-appRECORD-NabokaTimur-FIOT-2025/
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №1</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Створити функцію <code>createProduct(obj, callback)</code>, яка приймає 
+              об'єкт товару та callback-функцію. Функція додає до об'єкта унікальний 
+              ідентифікатор і викликає callback з цим об'єктом.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function createProduct(obj, callback) {
+  const product = { ...obj, id: Date.now() };
+  callback(product);
+}
+
+function logProduct(product) {
+  console.log(`Product: ${product.name}, price: ${product.price}`);
+}
+
+function logTotalPrice(product) {
+  console.log(`Total: ${product.price * product.qty}`);
+}
+
+function runTask1_1() {
+  const obj = { name: "Drone", price: 2000, qty: 3 };
+  createProduct(obj, logProduct);
+  createProduct(obj, logTotalPrice);
+  alert("Результат в консолі (F12)");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task1.png" alt="Результат завдання 1">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №2</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Є об'єкт з назвами медикаментів та датами придатності. 
+              Вивести масив назв медикаментів термін придатності яких ще не вийшов, 
+              відсортованих за датою від найближчої до найдальшої.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function runTask1_3() {
+  const medicines = {
+    "Аспірин": "2023-05-01",
+    "Парацетамол": "2026-11-12",
+    "Цитрамон": "2025-01-10",
+    "Ібупрофен": "2024-07-28"
+  };
+  
+  const now = new Date();
+  const result = Object.entries(medicines)
+    .filter(([name, date]) => new Date(date) > now)
+    .sort((a, b) => new Date(a[1]) - new Date(b[1]))
+    .map(([name]) => name);
+    
+  console.log(result);
+  alert("Результат в консолі (F12)");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task2.png" alt="Результат завдання 2">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №3</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Є масив товарів. Створити новий масив, в якому кожен товар має знижку 20%, 
+              та додати до кожного товару унікальний ідентифікатор.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function runTask1_5() {
+  const products = [
+    { name: "apple", price: 200 },
+    { name: "orange", price: 300 },
+    { name: "grapes", price: 750 }
+  ];
+  
+  const result = products.map((p, i) => ({
+    ...p,
+    price: p.price * 0.8,
+    id: i + 1
+  }));
+  
+  console.log(result);
+  alert("Результат в консолі");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task3.png" alt="Результат завдання 3">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №4</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Створити клас <code>Client</code> з приватними полями login та email. 
+              Реалізувати геттери та сеттери для цих полів.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>class Client {
+  #login;
+  #email;
+  
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
+  }
+  
+  get login() { 
+    return this.#login; 
+  }
+  
+  set login(v) { 
+    this.#login = v; 
+  }
+  
+  get email() { 
+    return this.#email; 
+  }
+  
+  set email(v) { 
+    this.#email = v; 
+  }
+}
+
+function runTask1_7() {
+  const c = new Client("john_doe", "john@gmail.com");
+  console.log(c.login, c.email);
+  alert("Результат у консоліі");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task4.png" alt="Результат завдання 4">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №5</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Є масив твітів з тегами. Порахувати кількість використань кожного тегу 
+              та вивести об'єкт з результатами підрахунку.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function runTask1_9() {
+  const tweets = [
+    { tags: ["js", "nodejs"] },
+    { tags: ["html", "css"] },
+    { tags: ["js", "react"] },
+    { tags: ["js", "html"] },
+    { tags: ["nodejs", "react"] }
+  ];
+  
+  const tagCount = tweets.flatMap(t => t.tags)
+    .reduce((a, t) => {
+      a[t] = (a[t] || 0) + 1;
+      return a;
+    }, {});
+    
+  console.log(tagCount);
+  alert("Результат у консолі");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task5.png" alt="Результат завдання 5">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №6</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Написати функцію <code>checkBrackets(str)</code>, яка перевіряє 
+              правильність розстановки дужок у рядку (круглих, квадратних, фігурних).
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function checkBrackets(str) {
+  const stack = [];
+  const pairs = { ")": "(", "}": "{", "]": "[" };
+  
+  for (const char of str) {
+    if ("([{".includes(char)) stack.push(char);
+    if (")]}".includes(char)) {
+      if (stack.pop() !== pairs[char]) return false;
+    }
+  }
+  
+  return stack.length === 0;
+}
+
+function runTask1_10() {
+  const str = "function test() { return [1,2]; }";
+  console.log(checkBrackets(str));
+  alert("Результат у консолі");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task6.png" alt="Результат завдання 6">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Висновки</h2>
+          <p>
+            Під час виконання лабораторної роботи №5 було вивчено роботу з масивами, 
+            callback-функціями, класами та їх методами у JavaScript. Отримано практичні 
+            навички використання методів масивів (map, filter, reduce, flatMap), роботи 
+            з об'єктами, створення класів з приватними полями та реалізації складних 
+            алгоритмів обробки даних.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

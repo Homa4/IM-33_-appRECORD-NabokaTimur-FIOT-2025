@@ -1,0 +1,295 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Times New Roman', serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .orientation-box {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        border: 2px solid #000;
+        padding: 15px;
+        text-align: center;
+        background-color: white;
+        z-index: 999;
+    }
+
+
+    .orientation-box h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .user-img {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+    }
+
+    .user-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .header h2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .student-info {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .lab-tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .lab-tab {
+        border: 2px solid #000;
+        border-radius: 20px;
+        padding: 10px 20px;
+        background-color: white;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .lab-tab.active {
+        background-color: #ffff99;
+        font-weight: bold;
+    }
+
+    .lab-tab:hover {
+        background-color: #ffffcc;
+    }
+
+    .content-wrapper {
+        display: flex;
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 280px;
+        flex-shrink: 0;
+    }
+
+    .menu-item {
+        border: 2px solid #000;
+        border-radius: 25px;
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        background-color: white;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .menu-item:hover {
+        background-color: #e6e6e6;
+    }
+
+    .menu-item.active {
+        background-color: #ffff99;
+        font-weight: bold;
+    }
+
+    .main-content {
+        flex: 1;
+        border: 2px solid #000;
+        padding: 30px;
+        min-height: 500px;
+        overflow-y: auto;
+        text-align: left;
+    }
+
+    .content-section {
+        display: none;
+    }
+
+    .content-section.active {
+        display: block;
+    }
+
+    .section-title {
+        font-size: 20px;
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+        font-weight: bold;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+    }
+
+    .info-block {
+        margin-bottom: 20px;
+    }
+
+    .info-block h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #000;
+    }
+
+    .info-block p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+        text-align: justify;
+    }
+
+    .info-block ul {
+        list-style-position: inside;
+        padding-left: 20px;
+    }
+
+    .info-block li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+
+    a {
+        color: #0066cc;
+        text-decoration: underline;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #004499;
+    }
+
+    pre {
+        background: none;
+        color: #000;
+        padding: 10px 0;
+        border-radius: 0;
+        overflow-x: auto;
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        line-height: 1.4;
+        border: none;
+        margin: 15px 0;
+    }
+
+    code {
+        font-family: 'Courier New', monospace;
+        white-space: pre-wrap;
+        display: block;
+        background: none;
+        color: #000;
+        padding: 0;
+    }
+
+
+    pre code {
+        background: transparent;
+        padding: 0;
+    }
+
+    .placeholder {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+        background: #f5f5f5;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .placeholder img {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #000;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .placeholder img:hover {
+        transform: scale(1.02);
+    }
+
+    /* Scrollbar Styling */
+    .main-content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .main-content::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .main-content::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+
+    .main-content::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    @media (max-width: 768px) {
+        .content-wrapper {
+            flex-direction: column;
+        }
+
+        .sidebar {
+            width: 100%;
+        }
+
+        .orientation-box {
+            position: static;
+            margin-bottom: 20px;
+        }
+
+        .lab-tabs {
+            justify-content: center;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        pre {
+            font-size: 11px;
+            padding: 15px;
+        }
+    }

@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+pre {
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+pre code {
+    background: none;
+    color: inherit;
+    white-space: pre;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.orientation-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: 2px solid #000;
+    padding: 15px;
+    text-align: center;
+    background-color: #ffffff;
+    z-index: 9999;
+}
+
+.user-img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+.user-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.student-info {
+    font-size: 14px;
+}
+
+.lab-tabs {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0 30px;
+    flex-wrap: wrap;
+}
+
+.lab-tab {
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+
+.lab-tab.active {
+    background-color: #ffff99;
+    font-weight: bold;
+}
+
+.lab-tab:hover {
+    background-color: #ffffcc;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.menu-item {
+    border: 2px solid #000;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background-color: #e6e6e6;
+}
+
+.menu-item.active {
+    background-color: #ffff99;
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    border: 2px solid #000;
+    padding: 30px;
+    min-height: 500px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.section-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+.info-block {
+    margin-bottom: 20px;
+}
+
+.info-block h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.info-block p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.info-block ul {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+.info-block li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #004499;
+}
+
+.placeholder {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.placeholder img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto;
+}
+
+.conclusion-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 1.8;
+    font-size: 14px;
+    text-align: justify;
+    border: 1px solid #e0e0e0;
+}
+
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .orientation-box {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .lab-tabs {
+        justify-content: center;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+}

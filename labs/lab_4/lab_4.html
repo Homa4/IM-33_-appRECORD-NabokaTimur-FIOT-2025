@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторна робота №4 — Frontend розробка</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="./lab_4.css" />
+  <script src="./lab_4.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="orientation-box">
+      <div class="user-img">
+        <img src="../../profile.jpg" alt="Фото студента" />
+      </div>
+    </div>
+
+    <div class="header">
+      <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+      <h2>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</h2>
+      <div class="student-info">
+        Виконавець: Студент групи ІМ-33_____ Набока Тимур Максимович
+      </div>
+    </div>
+
+    <div class="lab-tabs">
+      <a class="lab-tab" href="../../index.html">Лабораторна<br />робота №1</a>
+      <a class="lab-tab" href="../lab_2/lab_2.html">Лабораторна<br />робота №2</a>
+      <a class="lab-tab" href="../lab_3/lab_3.html">Лабораторна<br />робота №3</a>
+      <a class="lab-tab active" href="./lab_4.html">Лабораторна<br />робота №4</a>
+      <a class="lab-tab" href="../lab_5/lab_5.html">Лабораторна<br />робота №5</a>
+      <a class="lab-tab" href="../lab_6/lab_6.html">Лабораторна<br />робота №6</a>
+      <a class="lab-tab" href="../lab_7/lab_7.html">Лабораторна<br />робота №7</a>
+      <a class="lab-tab" href="#">Лабораторна<br />робота №8</a>
+      <a class="lab-tab" href="#">Лабораторна<br />робота №9</a>
+    </div>
+
+    <div class="content-wrapper">
+
+      <div class="sidebar">
+        <div class="menu-item active">Тема, мета ЛР №4, місце розташування сайту та звіту</div>
+        <div class="menu-item">Посилання на репозиторії</div>
+        <div class="menu-item">Посилання на живі сторінки</div>
+        <div class="menu-item">Завдання №1</div>
+        <div class="menu-item">Завдання №2</div>
+        <div class="menu-item">Завдання №3</div>
+        <div class="menu-item">Завдання №4</div>
+        <div class="menu-item">Завдання №5</div>
+        <div class="menu-item">Завдання №6</div>
+        <div class="menu-item">Завдання №7</div>
+        <div class="menu-item">Завдання №8</div>
+        <div class="menu-item">Завдання №9</div>
+        <div class="menu-item">Висновки до ЛР №4</div>
+      </div>
+
+      <div class="main-content">
+
+        <div class="content-section active">
+          <h2 class="section-title">Тема лабораторної роботи №4</h2>
+          <div class="info-block">
+            <h4>Тема:</h4>
+            <p>
+              Основи мови JavaScript. Умовні оператори, функції, масиви.
+              Робота з подіями, таймерами та елементами веб-сторінки.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Мета лабораторної роботи:</h4>
+            <p>
+              Придбати практичні навички написання скриптів мовою JavaScript:
+              використання умов, функцій, циклів, масивів, обробки подій та
+              створення інтерактивних елементів веб-сторінки.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Місце розташування звітних матеріалів:</h4>
+            <p>
+              HTML-звітного документу (цей документ), власного WEB-застосунку
+              та репозиторію із вихідними файлами. Посилання наведені в
+              наступних пунктах меню.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Посилання на репозиторії</h2>
+          <ul>
+            <li>
+              Репозиторій власного WEB-застосунку:
+              <a href="https://github.com/Homa4/lab4" target="_blank">
+                https://github.com/Homa4/lab4
+              </a>
+            </li>
+            <li>
+              Репозиторій звітного HTML-документу:
+              <a href="https://github.com/Homa4/IM-33_-appRECORD-NabokaTimur-FIOT-2025" target="_blank">
+                https://github.com/Homa4/IM-33_-appRECORD-NabokaTimur-FIOT-2025
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Посилання на живі сторінки</h2>
+          <ul>
+            <li>
+              Жива сторінка власного WEB-застосунку:
+              <a href="https://homa4.github.io/lab4/" target="_blank">
+                https://homa4.github.io/lab4/
+              </a>
+            </li>
+            <li>
+              Жива сторінка звітного HTML-документу:
+              <a href="https://homa4.github.io/IM-33_-appRECORD-NabokaTimur-FIOT-2025/" target="_blank">
+                https://homa4.github.io/IM-33_-appRECORD-NabokaTimur-FIOT-2025/
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №1</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Збережіть введене значення (використати метод <code>prompt()</code>) у змінну
+              <code>value</code>. Вивести це значення у Console, використовуючи
+              шаблонний рядок. Перевірити: введене значення відʼємне, додатнє
+              чи дорівнює нулю. Відповідь вивести за допомогою <code>alert()</code>.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function task1() {
+  let value = prompt("Введіть число:");
+  console.log(`Введене значення: ${value}`);
+
+  let num = Number(value);
+
+  if (isNaN(num)) {
+    alert("Це не число!");
+  } else if (num &gt; 0) {
+    alert("Число додатнє");
+  } else if (num &lt; 0) {
+    alert("Число від'ємне");
+  } else {
+    alert("Число дорівнює нулю");
+  }
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+                <img src="img/task1.png" alt="Результат завдання 1">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №2</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Змінна <code>number</code> може набувати значення '1', '2', '3'
+              або '4'. Якщо вона має значення '1', то у змінну <code>result</code>
+              записати 'зима', якщо '2' – 'весна' і так далі. Розвʼязати
+              завдання за допомогою <code>switch...case</code>.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function task2() {
+  let number = prompt("Введіть номер пори року (1-4):");
+  let result;
+
+  switch (number) {
+    case "1":
+      result = "зима";
+      break;
+    case "2":
+      result = "весна";
+      break;
+    case "3":
+      result = "літо";
+      break;
+    case "4":
+      result = "осінь";
+      break;
+    default:
+      result = "Невірне значення! Введіть число від 1 до 4";
+  }
+
+  console.log(`Результат: ${result}`);
+  alert(result);
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+                <img src="img/task2.png" alt="Результат завдання 2">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №3</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Є користувачі <code>Admin</code> та <code>User</code>
+              з відповідними паролями. Написати програмний код, який
+              запитує у користувача логін і пароль та виводить результат
+              авторизації.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function task3() {
+  const Admin = { login: "Admin", password: "admin123" };
+  const User = { login: "User", password: "user456" };
+
+  let login = prompt("Введіть логін:");
+  console.log(`Введений логін: ${login}`);
+
+  if (login === null || login === "") {
+    alert("Cancelled");
+  } else if (login === Admin.login) {
+    let pass = prompt("Введіть пароль для Admin:");
+    if (pass === Admin.password) {
+      alert("Hello, Admin");
+    } else {
+      alert("Невірний пароль");
+    }
+  } else if (login === User.login) {
+    let pass = prompt("Введіть пароль для User:");
+    if (pass === User.password) {
+      alert("Hello, User");
+    } else {
+      alert("Невірний пароль");
+    }
+  } else {
+    alert("I don't know you");
+  }
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task3.png" alt="Результат завдання 3">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №4</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Станція з продажу ремонтних дроїдів. Оголосити функцію
+              <code>makeTransaction</code>, яка за кількістю дроїдів та ціною
+              за одиницю повертає рядок із інформацією про замовлення.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function makeTransaction(quantity, pricePerDroid) {
+  const totalPrice = quantity * pricePerDroid;
+  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+}
+
+function task4() {
+  console.log(makeTransaction(5, 3000));
+  console.log(makeTransaction(3, 1000));
+  console.log(makeTransaction(10, 500));
+  alert("Результати виведено в консоль (F12)");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task4.png" alt="Результат завдання 4">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №5</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Реалізувати функцію <code>checkForSpam(message)</code>, яка
+              перевіряє рядок на наявність підрядків "spam" або "sale"
+              (без урахування регістру).
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function checkForSpam(message) {
+  const lowerMessage = message.toLowerCase();
+  return lowerMessage.includes("spam") || lowerMessage.includes("sale");
+}
+
+function task5() {
+  console.log(
+    "checkForSpam('Latest technology news'):",
+    checkForSpam("Latest technology news")
+  );
+  console.log(
+    "checkForSpam('JavaScript weekly newsletter'):",
+    checkForSpam("JavaScript weekly newsletter")
+  );
+  console.log(
+    "checkForSpam('Get best SALE offers now!'):",
+    checkForSpam("Get best SALE offers now!")
+  );
+  console.log(
+    "checkForSpam('Amazing SpaM offer'):",
+    checkForSpam("Amazing SpaM offer")
+  );
+  alert("Результати виведено в консоль (F12)");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task5.png" alt="Результат завдання 5">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №6</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Функція <code>filterArray(numbers, value)</code> повертає масив
+              чисел, більших за задане значення <code>value</code>.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function filterArray(numbers, value) {
+  const result = [];
+
+  for (let i = 0; i &lt; numbers.length; i++) {
+    if (numbers[i] &gt; value) {
+      result.push(numbers[i]);
+    }
+  }
+
+  return result;
+}
+
+function task6() {
+  console.log(
+    "filterArray([1, 2, 3, 4, 5], 3):",
+    filterArray([1, 2, 3, 4, 5], 3)
+  );
+  console.log(
+    "filterArray([1, 2, 3, 4, 5], 4):",
+    filterArray([1, 2, 3, 4, 5], 4)
+  );
+  console.log(
+    "filterArray([1, 2, 3, 4, 5], 5):",
+    filterArray([1, 2, 3, 4, 5], 5)
+  );
+  console.log(
+    "filterArray([12, 24, 8, 41, 76], 38):",
+    filterArray([12, 24, 8, 41, 76], 38)
+  );
+  alert("Результати виведено в консоль (F12)");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task6.png" alt="Результат завдання 6">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №7 (варіант 5)</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              1) Визначити максимальне та мінімальне значення серед елементів з
+              парними та непарними індексами одновимірного масиву.<br />
+              2) Виконати сортування масиву методом вибору за спаданням.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function findMinMaxByIndex(arr) {
+  let evenIndexMax = -Infinity,
+    evenIndexMin = Infinity;
+  let oddIndexMax = -Infinity,
+    oddIndexMin = Infinity;
+
+  for (let i = 0; i &lt; arr.length; i++) {
+    if (i % 2 === 0) {
+      if (arr[i] &gt; evenIndexMax) evenIndexMax = arr[i];
+      if (arr[i] &lt; evenIndexMin) evenIndexMin = arr[i];
+    } else {
+      if (arr[i] &gt; oddIndexMax) oddIndexMax = arr[i];
+      if (arr[i] &lt; oddIndexMin) oddIndexMin = arr[i];
+    }
+  }
+
+  return { evenIndexMax, evenIndexMin, oddIndexMax, oddIndexMin };
+}
+
+function selectionSortDescending(arr) {
+  const result = [...arr];
+
+  for (let i = 0; i &lt; result.length - 1; i++) {
+    let maxIdx = i;
+    for (let j = i + 1; j &lt; result.length; j++) {
+      if (result[j] &gt; result[maxIdx]) {
+        maxIdx = j;
+      }
+    }
+    if (maxIdx !== i) {
+      [result[i], result[maxIdx]] = [result[maxIdx], result[i]];
+    }
+  }
+
+  return result;
+}
+
+function task7() {
+  const size = Number(prompt("Введіть кількість елементів масиву:"));
+  const arr = [];
+  for (let i = 0; i &lt; size; i++) {
+    arr.push(Math.floor(Math.random() * 100) - 50);
+  }
+
+  console.log("=== ЗАВДАННЯ 7 ===");
+  console.log("Вхідний масив:", arr);
+  const stats = findMinMaxByIndex(arr);
+  console.log("Максимум серед парних індексів:", stats.evenIndexMax);
+  console.log("Мінімум серед парних індексів:", stats.evenIndexMin);
+  console.log("Максимум серед непарних індексів:", stats.oddIndexMax);
+  console.log("Мінімум серед непарних індексів:", stats.oddIndexMin);
+
+  const sorted = selectionSortDescending(arr);
+  console.log("Відсортований масив (за зменшенням):", sorted);
+  alert("Результати виведено в консоль (F12)");
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task7.png" alt="Результат завдання 7">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №8</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Є двовимірний масив цілих чисел. Сформувати окремі масиви
+              додатніх та відʼємних елементів. Якщо додатних елементів не менше
+              трьох – замінити третій елемент введеним користувачем відʼємним
+              числом.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>function task8() {
+  const rows = 3,
+    cols = 4;
+  const matrix = [];
+
+  for (let i = 0; i &lt; rows; i++) {
+    matrix[i] = [];
+    for (let j = 0; j &lt; cols; j++) {
+      matrix[i][j] = Math.floor(Math.random() * 201) - 100;
+    }
+  }
+
+  console.log("=== ЗАВДАННЯ 8 ===");
+  console.log("Вхідний двовимірний масив:");
+  console.table(matrix);
+
+  const positive = [];
+  const negative = [];
+
+  for (let i = 0; i &lt; rows; i++) {
+    for (let j = 0; j &lt; cols; j++) {
+      if (matrix[i][j] &gt; 0) {
+        positive.push(matrix[i][j]);
+      } else if (matrix[i][j] &lt; 0) {
+        negative.push(matrix[i][j]);
+      }
+    }
+  }
+
+  console.log("Масив додатніх чисел:", positive);
+  console.log("Масив від'ємних чисел:", negative);
+
+  if (positive.length >= 3) {
+    const newValue = prompt(
+      "Введіть від'ємне значення для заміни третього елемента:"
+    );
+    const num = Number(newValue);
+    if (num &lt; 0) {
+      positive[2] = num;
+      console.log("Масив додатніх після заміни:", positive);
+      alert("Заміна виконана! Дивіться консоль (F12)");
+    } else {
+      alert("Потрібно ввести від'ємне число!");
+    }
+  } else {
+    alert("У масиві додатніх менше 3 елементів!");
+  }
+}</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+             <img src="img/task8.png" alt="Результат завдання 8">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №9 (варіант 5) — слайд-шоу</h2>
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Реалізувати слайд-шоу з таймером, можливістю зміни інтервалу
+              показу, налаштуванням розміру слайда та циклічністю відтворення.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання:</h4>
+<pre><code>let currentSlide = 0;
+const totalSlides = 5;
+let slideshowInterval = null;
+const colors = [
+  "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+  "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+  "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+  "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+  "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+];
+
+function updateSlide() {
+  const slideContent = document.getElementById("slide-content");
+  const slideCounter = document.getElementById("slide-counter");
+
+  slideContent.style.background = colors[currentSlide];
+  slideContent.textContent = currentSlide + 1;
+  slideCounter.textContent = `Слайд ${currentSlide + 1} з ${totalSlides}`;
+}
+
+function nextSlide() {
+  const loop = document.getElementById("loop").checked;
+
+  if (currentSlide &lt; totalSlides - 1) {
+    currentSlide++;
+  } else if (loop) {
+    currentSlide = 0;
+  } else {
+    stopSlideshow();
+    return;
+  }
+
+  updateSlide();
+}
+
+function prevSlide() {
+  if (currentSlide &gt; 0) {
+    currentSlide--;
+  } else {
+    currentSlide = totalSlides - 1;
+  }
+  updateSlide();
+}
+
+function startSlideshow() {
+  if (slideshowInterval) return;
+
+  const interval = Number(document.getElementById("interval").value);
+  slideshowInterval = setInterval(nextSlide, interval);
+  alert("Слайд-шоу запущено!");
+}
+
+function stopSlideshow() {
+  if (slideshowInterval) {
+    clearInterval(slideshowInterval);
+    slideshowInterval = null;
+    alert("Слайд-шоу зупинено!");
+  }
+}
+
+function updateSizeDisplay() {
+  const size = document.getElementById("size").value;
+  const slideContent = document.getElementById("slide-content");
+
+  slideContent.style.width = size + "px";
+  slideContent.style.height = size * 0.75 + "px";
+
+  document.getElementById("size-value").textContent = size + "px";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  updateSlide();
+});</code></pre>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task9.png" alt="Результат завдання 9">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Висновки</h2>
+          <p>
+            У ході виконання лабораторної роботи №4 було закріплено навички
+            програмування мовою JavaScript: використання умовних операторів,
+            функцій, роботи з масивами, обробки подій та таймерів. Також
+            реалізовано декілька практичних задач, включаючи роботу з
+            двовимірними масивами та створення інтерактивного слайд-шоу.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

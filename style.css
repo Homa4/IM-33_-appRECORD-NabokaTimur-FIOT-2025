@@ -232,18 +232,6 @@ body {
     margin: 15px 0;
 }
 
-.code-block {
-    background: #282c34;
-    color: #abb2bf;
-    padding: 20px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
-    line-height: 1.5;
-    border: 1px solid #000;
-}
-
 .code-block code {
     white-space: pre;
     display: block;

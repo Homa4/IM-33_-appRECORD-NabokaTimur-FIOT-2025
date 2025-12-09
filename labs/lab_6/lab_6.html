@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторна робота №6 — Frontend розробка</title>
+
+  <link rel="stylesheet" href="lab_6.css">
+  <link rel="stylesheet" href="../../style.css">
+
+  <script src="lab_6.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="orientation-box">
+      <div class="user-img">
+        <img src="../../profile.jpg" alt="Фото студента" />
+      </div>
+    </div>
+
+    <div class="header">
+      <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+      <h2>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</h2>
+      <div class="student-info">
+        Виконавець: Студент групи ІМ-33_____ Набока Тимур Максимович
+      </div>
+    </div>
+
+    <div class="lab-tabs">
+      <a class="lab-tab" href="../../index.html">Лабораторна<br>робота №1</a>
+      <a class="lab-tab" href="../lab_2/lab_2.html">Лабораторна<br>робота №2</a>
+      <a class="lab-tab" href="../lab_3/lab_3.html">Лабораторна<br>робота №3</a>
+      <a class="lab-tab" href="../lab_4/lab_4.html">Лабораторна<br>робота №4</a>
+      <a class="lab-tab" href="../lab_5/lab_5.html">Лабораторна<br>робота №5</a>
+      <a class="lab-tab active" href="./lab_6.html">Лабораторна<br>робота №6</a>
+      <a class="lab-tab" href="../lab_7/lab_7.html">Лабораторна<br>робота №7</a>
+      <a class="lab-tab" href="#">Лабораторна<br>робота №8</a>
+      <a class="lab-tab" href="#">Лабораторна<br>робота №9</a>
+    </div>
+
+    <div class="content-wrapper">
+
+      <div class="sidebar">
+        <div class="menu-item active">Тема, мета ЛР №6, місце розташування сайту та звіту</div>
+        <div class="menu-item">Посилання на репозиторії</div>
+        <div class="menu-item">Посилання на живі сторінки</div>
+
+        <div class="menu-item">Завдання №1</div>
+        <div class="menu-item">Завдання №3</div>
+        <div class="menu-item">Завдання №5</div>
+        <div class="menu-item">Завдання №7</div>
+        <div class="menu-item">Завдання №8</div>
+        <div class="menu-item">Завдання №9</div>
+        <div class="menu-item">Завдання №10</div>
+
+        <div class="menu-item">Висновки до ЛР №6</div>
+      </div>
+
+      <div class="main-content">
+
+        <div class="content-section active">
+          <h2 class="section-title">Тема лабораторної роботи №6</h2>
+
+          <div class="info-block">
+            <h4>Тема:</h4>
+            <p>
+              ПРОТОТИПИ. КЛАСИ. ОБ'ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM). ПОДІЇ. ОБ'ЄКТ ПОДІЇ.
+              ДЕЛЕГУВАННЯ ПОДІЙ.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Мета лабораторної роботи:</h4>
+            <p>
+              Придбати практичні навички роботи з DOM, подіями та делегуванням подій.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Місце розташування звітних матеріалів:</h4>
+            <p>
+              HTML-звітного документа (цей документ), власного WEB-застосунку та
+              репозиторію із вихідними файлами. Посилання наведені в наступних пунктах меню.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Посилання на репозиторії</h2>
+
+          <div class="info-block">
+            <ul>
+              <li>
+                Репозиторій власного WEB-застосунку:
+                <a href="https://github.com/Homa4/lab6-WEB.git" target="_blank">
+                  https://github.com/Homa4/lab6-WEB.git
+                </a>
+              </li>
+              <li>
+                Репозиторій звітного HTML-документу:
+                <a href="https://github.com/Homa4/IM-33_-appRECORD-NabokaTimur-FIOT-2025" target="_blank">
+                  https://github.com/Homa4/IM-33_-appRECORD-NabokaTimur-FIOT-2025
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Посилання на живі сторінки</h2>
+
+          <div class="info-block">
+            <ul>
+              <li>
+                Жива сторінка власного WEB-застосунку:
+                <a href=" https://homa4.github.io/lab6-WEB/" target="_blank"> https://homa4.github.io/lab6-WEB/</a>
+              </li>
+              <li>
+                Жива сторінка звітного HTML-документу:
+                <a href="https://homa4.github.io/IM-33_-appRECORD-NabokaTimur-FIOT-2025/" target="_blank">
+                  https://homa4.github.io/IM-33_-appRECORD-NabokaTimur-FIOT-2025/
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №1 — SHOW ME</h2>
+
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Створити поле введення тексту та кнопку <strong>SHOW ME</strong>.
+              Після натискання кнопки вміст текстового поля має виводитися в консоль браузера.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Фрагмент HTML-коду:</h4>
+            <div class="code-block">
+<code>&lt;div class="task"&gt;
+  &lt;h2&gt;Завдання 1: SHOW ME&lt;/h2&gt;
+  &lt;div class="task-content"&gt;
+    &lt;p&gt;Введіть текст:&lt;/p&gt;
+    &lt;input type="text" id="input1" placeholder="Введіть щось..."&gt;
+    &lt;button id="showBtn"&gt;SHOW ME&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання (JavaScript):</h4>
+            <div class="code-block">
+<code>const showBtn = document.getElementById("showBtn");
+const input1 = document.getElementById("input1");
+
+showBtn.addEventListener("click", () =&gt; {
+  console.log("Завдання 1:", input1.value);
+});</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task1.png" alt="Результат завдання 1">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №3 — Приховати / Розкрити пароль</h2>
+
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Створити поле для введення пароля та кнопку, яка змінює тип поля
+              <code>text</code>/<code>password</code>, а також свій напис
+              <strong>«Приховати» / «Розкрити»</strong>.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Фрагмент HTML-коду:</h4>
+            <div class="code-block">
+<code>&lt;div class="task"&gt;
+  &lt;h2&gt;Завдання 3: Приховати/Розкрити&lt;/h2&gt;
+  &lt;div class="task-content"&gt;
+    &lt;p&gt;Введіть пароль:&lt;/p&gt;
+    &lt;input type="text" id="passwordInput" placeholder="Введіть пароль..."&gt;
+    &lt;button id="toggleBtn"&gt;Приховати&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання (JavaScript):</h4>
+            <div class="code-block">
+<code>const toggleBtn = document.getElementById("toggleBtn");
+const passwordInput = document.getElementById("passwordInput");
+
+toggleBtn.addEventListener("click", () =&gt; {
+  if (passwordInput.type === "text") {
+    passwordInput.type = "password";
+    toggleBtn.textContent = "Розкрити";
+  } else {
+    passwordInput.type = "text";
+    toggleBtn.textContent = "Приховати";
+  }
+});</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task2.png" alt="Результат завдання 2">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №5 — Клік в межах області</h2>
+
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Є зелений квадрат (<code>#place</code>). Необхідно відслідковувати кліки по сторінці
+              та визначати, чи був клік виконаний в межах цього елемента. Результат
+              виводиться в консоль у вигляді булевого значення.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Фрагмент HTML-коду:</h4>
+            <div class="code-block">
+<code>&lt;div class="task"&gt;
+  &lt;h2&gt;Завдання 5: Клік в межах області&lt;/h2&gt;
+  &lt;div class="task-content"&gt;
+    &lt;p class="taskTitle"&gt;Клікніть на зеленому квадраті або поза ним&lt;/p&gt;
+    &lt;div id="place"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання (JavaScript):</h4>
+            <div class="code-block">
+<code>window.addEventListener("click", (event) =&gt; {
+  const place = document.getElementById("place");
+  const isInsidePlace = place.contains(event.target);
+  console.log("Завдання 5 - Клік в #place:", isInsidePlace);
+});</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task3.png" alt="Результат завдання 3">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №7 — Категорії</h2>
+
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Для списку категорій вивести в консоль кількість категорій
+              та для кожної категорії — її назву і кількість елементів всередині.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Фрагмент HTML-коду:</h4>
+            <div class="code-block">
+<code>&lt;ul id="categories"&gt;
+  &lt;li class="item"&gt;
+    &lt;h2&gt;Animals&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Cat&lt;/li&gt;
+      &lt;li&gt;Hamster&lt;/li&gt;
+      &lt;li&gt;Horse&lt;/li&gt;
+      &lt;li&gt;Parrot&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li class="item"&gt;
+    &lt;h2&gt;Products&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Bread&lt;/li&gt;
+      &lt;li&gt;Prasley&lt;/li&gt;
+      &lt;li&gt;Cheese&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li class="item"&gt;
+    &lt;h2&gt;Technologies&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+      &lt;li&gt;React&lt;/li&gt;
+      &lt;li&gt;Node.js&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання (JavaScript):</h4>
+            <div class="code-block">
+<code>const categories = document.querySelectorAll("#categories .item");
+console.log("Завдання 7:");
+console.log("Number of categories:", categories.length);
+
+categories.forEach((item) =&gt; {
+  const title = item.querySelector("h2").textContent;
+  const elements = item.querySelectorAll("ul li").length;
+  console.log(`Category: ${title}`);
+  console.log(`Elements: ${elements}`);
+});</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task4.png" alt="Результат завдання 4">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №8 — Форма логіна</h2>
+
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Реалізувати обробку форми логіна. При відправці форми:
+              якщо будь-яке поле порожнє — показати <code>alert</code>;
+              якщо всі заповнені — вивести дані форми в консоль та очистити поля.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Фрагмент HTML-коду:</h4>
+            <div class="code-block">
+<code>&lt;form class="login-form"&gt;
+  &lt;label&gt;
+    Email
+    &lt;input type="email" name="email" /&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    Password
+    &lt;input type="password" name="password" /&gt;
+  &lt;/label&gt;
+  &lt;button type="submit"&gt;Log in&lt;/button&gt;
+&lt;/form&gt;</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання (JavaScript):</h4>
+            <div class="code-block">
+<code>const loginForm = document.querySelector(".login-form");
+
+loginForm.addEventListener("submit", (event) =&gt; {
+  event.preventDefault();
+
+  const formData = {
+    email: event.target.elements.email.value.trim(),
+    password: event.target.elements.password.value.trim(),
+  };
+
+  if (!formData.email || !formData.password) {
+    alert("All form fields must be filled in");
+    return;
+  }
+
+  console.log("Завдання 8 - Дані форми:", formData);
+  loginForm.reset();
+});</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task5.png" alt="Результат завдання 5">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №9 — Зміна кольору фону</h2>
+
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              Реалізувати віджет, який змінює колір фону сторінки на випадковий
+              при натисканні кнопки, а сам колір відображати в текстовому полі.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Фрагмент HTML-коду:</h4>
+            <div class="code-block">
+<code>&lt;div class="widget"&gt;
+  &lt;p&gt;Background color: &lt;span class="color"&gt;-&lt;/span&gt;&lt;/p&gt;
+  &lt;button type="button" class="change-color"&gt;Change color&lt;/button&gt;
+&lt;/div&gt;</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання (JavaScript):</h4>
+            <div class="code-block">
+<code>function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, "0")}`;
+}
+
+const changeColorBtn = document.querySelector(".change-color");
+const colorSpan = document.querySelector(".color");
+
+changeColorBtn.addEventListener("click", () =&gt; {
+  const newColor = getRandomHexColor();
+  document.body.style.backgroundColor = newColor;
+  colorSpan.textContent = newColor;
+});</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task6.png" alt="Результат завдання 6">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Завдання №10 — Колекція квадратів</h2>
+
+          <div class="info-block">
+            <h4>Умова:</h4>
+            <p>
+              На основі введеного числа створити колекцію кольорових квадратів.
+              Початковий розмір — 30×30 px, кожен наступний більший на 10 px.
+              Реалізувати кнопки <strong>Create</strong> та <strong>Destroy</strong>.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4>Фрагмент HTML-коду:</h4>
+            <div class="code-block">
+<code>&lt;div id="controls"&gt;
+  &lt;input type="number" id="amount" min="1" max="100" step="1"
+         placeholder="Введіть кількість" /&gt;
+  &lt;button type="button" data-create&gt;Create&lt;/button&gt;
+  &lt;button type="button" data-destroy&gt;Destroy&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id="boxes"&gt;&lt;/div&gt;</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Код завдання (JavaScript):</h4>
+            <div class="code-block">
+<code>function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, "0")}`;
+}
+
+const createBtn = document.querySelector("[data-create]");
+const destroyBtn = document.querySelector("[data-destroy]");
+const amountInput = document.getElementById("amount");
+const boxesContainer = document.getElementById("boxes");
+
+function createBoxes(amount) {
+  const boxes = [];
+  let size = 30;
+
+  for (let i = 0; i &lt; amount; i++) {
+    const div = document.createElement("div");
+    div.style.width = `${size}px`;
+    div.style.height = `${size}px`;
+    div.style.backgroundColor = getRandomHexColor();
+    boxes.push(div);
+    size += 10;
+  }
+
+  boxesContainer.append(...boxes);
+}
+
+function destroyBoxes() {
+  boxesContainer.innerHTML = "";
+}
+
+createBtn.addEventListener("click", () =&gt; {
+  const amount = Number(amountInput.value);
+
+  if (amount &lt; 1 || amount &gt; 100) {
+    alert("Будь ласка, введіть число від 1 до 100");
+    return;
+  }
+
+  destroyBoxes();
+  createBoxes(amount);
+  amountInput.value = "";
+});
+
+destroyBtn.addEventListener("click", destroyBoxes);</code>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h4>Результат виконання:</h4>
+            <p class="placeholder">
+              <img src="img/task7.png" alt="Результат завдання 7">
+            </p>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Висновки до лабораторної роботи №6</h2>
+          <div class="conclusion-section">
+            <p>
+              У ході виконання лабораторної роботи №6 було закріплено навички
+              роботи з об'єктною моделлю документа (DOM), обробки подій та
+              делегування подій у JavaScript. Реалізовано взаємодію з різними
+              елементами сторінки: полями введення, формами, списками,
+              динамічними блоками та зміною стилів. Отримано практичний досвід
+              побудови інтерактивних інтерфейсів та роботи з подієвою моделлю
+              браузера.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div> 
+
+  </div> 
+</body>
+</html>
